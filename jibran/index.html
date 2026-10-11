@@ -169,6 +169,13 @@ footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; g
 .projects { grid-template-columns: repeat(auto-fit, minmax(min(100%, 20rem), 1fr)); }
 .project:last-child:nth-child(odd) { grid-column: 1 / -1; }
 .timeline ul { margin: .5rem 0 0; padding-left: 1.1rem; color: var(--muted); max-width: 40rem; display: grid; gap: .3rem; }
+.client { display: inline-flex; align-items: center; gap: .6rem; flex-wrap: wrap; text-decoration: none; font: 500 .8125rem/1.3 var(--mono); color: var(--accent); }
+.client:hover .dom { text-decoration: underline; }
+.plate { display: inline-flex; align-items: center; height: 2rem; padding: .3rem .6rem; border-radius: 6px; background: #FFFFFF; border: 1px solid var(--line); }
+.plate.dark { background: #14181F; border-color: #14181F; }
+.plate img { height: 100%; width: auto; max-width: 9rem; object-fit: contain; display: block; }
+.timeline a.org { text-decoration: none; }
+.timeline a.org:hover, .timeline li a:hover { text-decoration: underline; }
 </style>
 
 <header class="bar">
@@ -257,8 +264,9 @@ footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; g
             <div class="thumb" aria-hidden="true"><div>user → <b>policy check</b> → model / tool / data<br>traced in Portkey</div></div>
             <div class="body">
               <p class="meta">Perpetual Intelligence · 2025 to 2026</p>
+              <a class="client" href="https://www.perpetual-intelligence.com/" target="_blank" rel="noopener"><span class="plate"><img src="https://www.perpetual-intelligence.com/images/logo-horizontal.png" alt="Perpetual Intelligence logo" loading="lazy" onerror="this.parentNode.hidden=true"></span><span class="dom">perpetual-intelligence.com ↗</span></a>
               <h3>AI governance platform</h3>
-              <p>An enterprise platform that controls who can use which AI models, tools and data, built end to end on Node.js, TypeScript and PostgreSQL.</p>
+              <p>Perpetual Intelligence is a governance control plane that stops data leakage and policy violations across AI models and agents. I built the platform end to end on Node.js, TypeScript and PostgreSQL.</p>
               <ul>
                 <li>ABAC through Microsoft Entra and ReBAC through SpiceDB</li>
                 <li>MCP servers, LLM guardrails and a security proxy for AI coding-agent traffic</li>
@@ -271,6 +279,7 @@ footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; g
             <div class="thumb" aria-hidden="true"><div>ingest → <b>embed</b> → pgvector → <b>retrieve</b> → answer</div></div>
             <div class="body">
               <p class="meta">Perpetual Intelligence · 2025 to 2026</p>
+              <a class="client" href="https://www.perpetual-intelligence.com/" target="_blank" rel="noopener"><span class="plate"><img src="https://www.perpetual-intelligence.com/images/logo-horizontal.png" alt="Perpetual Intelligence logo" loading="lazy" onerror="this.parentNode.hidden=true"></span><span class="dom">perpetual-intelligence.com ↗</span></a>
               <h3>Villa RAG system</h3>
               <p>A retrieval-augmented generation pipeline that grounds LLM answers in company documents.</p>
               <ul>
@@ -284,9 +293,10 @@ footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; g
           <article class="project">
             <div class="thumb" aria-hidden="true"><div>Next.js App Router · <b>Server Components</b><br>served from the edge</div></div>
             <div class="body">
-              <p class="meta">Doodles · 2026 to now</p>
+              <p class="meta">Doodle · 2026 to now</p>
+              <a class="client" href="https://doodle.com/en/" target="_blank" rel="noopener"><span class="plate dark"><img src="https://images.ctfassets.net/p24lh3qexxeo/7wMg3AVtgUBp8FxrBOmpG/29854c6a76d0ba46d692024bf2d95e24/logo-white.svg" alt="Doodle logo" loading="lazy" onerror="this.parentNode.hidden=true"></span><span class="dom">doodle.com ↗</span></a>
               <h3>My-Time scheduling module</h3>
-              <p>I lead the My-Time module of a calendar and scheduling platform, owning its component architecture, state and API integration.</p>
+              <p>I lead the My-Time module of Doodle, the scheduling platform, owning its component architecture, state and API integration.</p>
               <ul>
                 <li>REST and GraphQL APIs for teams and organizations</li>
                 <li>GitHub API integrations</li>
@@ -299,8 +309,9 @@ footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; g
             <div class="thumb" aria-hidden="true"><div>Rails API → <b>Redis cache</b> → PostgreSQL<br>millions of requests</div></div>
             <div class="body">
               <p class="meta">NextAgency · 2022 to 2025</p>
+              <a class="client" href="https://nextagency.com/" target="_blank" rel="noopener"><span class="plate"><img src="https://nextagency.com/wp-content/uploads/2025/10/next_agency_logo.svg" alt="NextAgency logo" loading="lazy" onerror="this.parentNode.hidden=true"></span><span class="dom">nextagency.com ↗</span></a>
               <h3>NextAgency enterprise SaaS</h3>
-              <p>Features for teams and organizations on a high-traffic Ruby on Rails and React platform serving millions of requests.</p>
+              <p>NextAgency is an agency management system and CRM for health, senior and life insurance agencies. I built features for teams and organizations on its high-traffic Rails and React platform.</p>
               <ul>
                 <li>Cut API latency by 35% and database load by 40% with indexing and Redis caching</li>
                 <li>Selling Partner API integrations and real-time campaign analytics</li>
@@ -339,9 +350,9 @@ footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; g
               <h3>Senior Software Engineer</h3>
               <span class="org">CodingCops</span> <span class="via">· software consultancy, Lahore</span>
               <ul>
-                <li><strong>Doodles</strong> (2026 to now): leading the Next.js My-Time module, GraphQL APIs and edge work on Cloudflare.</li>
-                <li><strong>Perpetual Intelligence</strong> (2025 to 2026): built the AI governance platform and owned DevOps on AWS with Docker, ECS, CI/CD and CloudWatch.</li>
-                <li><strong>NextAgency</strong> (2022 to 2025): Rails and React features for systems serving millions of requests. Cut API latency by 35% and database load by 40%, built Selling Partner API integrations and SES campaigns, and mentored junior developers.</li>
+                <li><strong><a href="https://doodle.com/en/" target="_blank" rel="noopener">Doodle</a></strong> (2026 to now): leading the Next.js My-Time module, GraphQL APIs and edge work on Cloudflare.</li>
+                <li><strong><a href="https://www.perpetual-intelligence.com/" target="_blank" rel="noopener">Perpetual Intelligence</a></strong> (2025 to 2026): built the AI governance platform and owned DevOps on AWS with Docker, ECS, CI/CD and CloudWatch.</li>
+                <li><strong><a href="https://nextagency.com/" target="_blank" rel="noopener">NextAgency</a></strong> (2022 to 2025): Rails and React features for systems serving millions of requests. Cut API latency by 35% and database load by 40%, built Selling Partner API integrations and SES campaigns, and mentored junior developers.</li>
               </ul>
             </div>
           </li>
