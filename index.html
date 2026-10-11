@@ -167,6 +167,7 @@ footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; g
 .project ul { margin: 0; padding-left: 1.1rem; color: var(--muted); font-size: .95rem; display: grid; gap: .3rem; }
 .timeline .via { color: var(--muted); font-weight: 400; }
 .projects { grid-template-columns: repeat(auto-fit, minmax(min(100%, 20rem), 1fr)); }
+.project:last-child:nth-child(odd) { grid-column: 1 / -1; }
 .timeline ul { margin: .5rem 0 0; padding-left: 1.1rem; color: var(--muted); max-width: 40rem; display: grid; gap: .3rem; }
 </style>
 
@@ -292,6 +293,20 @@ footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; g
                 <li>Cloudflare Workers for speed and reliability</li>
               </ul>
               <p class="tags">Next.js · React · TypeScript · GraphQL · Cloudflare</p>
+            </div>
+          </article>
+          <article class="project">
+            <div class="thumb" aria-hidden="true"><div>Rails API → <b>Redis cache</b> → PostgreSQL<br>millions of requests</div></div>
+            <div class="body">
+              <p class="meta">NextAgency · 2022 to 2025</p>
+              <h3>NextAgency enterprise SaaS</h3>
+              <p>Features for teams and organizations on a high-traffic Ruby on Rails and React platform serving millions of requests.</p>
+              <ul>
+                <li>Cut API latency by 35% and database load by 40% with indexing and Redis caching</li>
+                <li>Selling Partner API integrations and real-time campaign analytics</li>
+                <li>Automation workflows, SES email campaigns on background jobs, and reporting dashboards</li>
+              </ul>
+              <p class="tags">Ruby on Rails · React · PostgreSQL · Redis · Sidekiq · AWS SES</p>
             </div>
           </article>
           <article class="project">
