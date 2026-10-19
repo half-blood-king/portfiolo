@@ -175,6 +175,10 @@ footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; g
 .plate img { height: 100%; width: auto; max-width: 9rem; object-fit: contain; display: block; }
 .timeline a.org { text-decoration: none; }
 .timeline a.org:hover, .timeline li a:hover { text-decoration: underline; }
+.split { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 18rem), 1fr)); gap: 2rem; }
+.split h3 { font: 700 1.15rem/1.3 var(--display); margin-bottom: .75rem; }
+.split ul { margin: 0; padding-left: 1.1rem; color: var(--muted); display: grid; gap: .5rem; }
+.split strong { color: var(--ink); font-weight: 600; }
 </style>
 
 <header class="bar">
@@ -183,6 +187,7 @@ footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; g
     <nav class="nav" aria-label="Sections">
       <a href="#about">About</a>
       <a href="#skills">Skills</a>
+      <a href="#frontend">Frontend</a>
       <a href="#projects">Projects</a>
       <a href="#experience">Experience</a>
       <a href="#contact">Contact</a>
@@ -194,7 +199,7 @@ footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; g
   <div class="hero wrap">
     <p class="eyebrow">Komonke, Pakistan · Software Engineer</p>
     <h1>Hi, I'm Maida Maqbool.<br><em>I build and scale SaaS apps with Rails and React.</em></h1>
-    <p class="lede">Software engineer with 4+ years building SaaS web applications on Ruby on Rails and React, with Node.js, Elasticsearch, database tuning and AWS DevOps along the way.</p>
+    <p class="lede">Software engineer with 4+ years building SaaS web applications with React front ends and Ruby on Rails and Node.js back ends, plus Elasticsearch, database tuning and AWS DevOps.</p>
     <div class="actions">
       <a class="btn primary" href="#projects">See my work</a>
       <a class="btn ghost" href="#contact">Get in touch</a>
@@ -226,11 +231,11 @@ footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; g
         <div class="skillsets">
           <div>
             <h3>Backend</h3>
-            <ul class="chips"><li>Ruby on Rails</li><li>Ruby 3</li><li>Node.js</li><li>Express</li><li>REST</li><li>GraphQL</li></ul>
+            <ul class="chips"><li>Ruby on Rails</li><li>Ruby 3</li><li>Node.js</li><li>Express</li><li>MongoDB</li><li>REST</li><li>GraphQL</li><li>Backend validation</li></ul>
           </div>
           <div>
             <h3>Frontend</h3>
-            <ul class="chips"><li>React</li><li>Redux</li><li>React DnD</li><li>Ember.js</li><li>Tailwind CSS</li><li>React Native</li></ul>
+            <ul class="chips"><li>React</li><li>Redux</li><li>React DnD</li><li>Reusable components</li><li>Data visualization</li><li>React Native</li><li>Ember.js</li><li>HTML</li><li>CSS</li><li>Tailwind CSS</li></ul>
           </div>
           <div>
             <h3>Search and data</h3>
@@ -247,6 +252,36 @@ footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; g
           <div>
             <h3>Languages</h3>
             <ul class="chips"><li>Ruby</li><li>JavaScript</li><li>C++</li></ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="frontend">
+    <div class="wrap grid">
+      <p class="label">Frontend and Node.js</p>
+      <div>
+        <h2>React on the front, Node.js behind it</h2>
+        <div class="split">
+          <div>
+            <h3>React and frontend</h3>
+            <ul>
+              <li><strong>NextAgency portal:</strong> React and Ember.js front-end features on top of the Rails backend.</li>
+              <li><strong>Drag-and-drop dashboard:</strong> built with React DnD, Redux state management and reusable components.</li>
+              <li><strong>Data visualization:</strong> a Binance currency table with bar and line charts of prices over date ranges, and a broker application dashboard.</li>
+              <li><strong>Mobile:</strong> Customized Tailor, a React Native app for customizing clothes.</li>
+              <li>Clean, responsive UI with HTML, CSS and Tailwind CSS.</li>
+            </ul>
+          </div>
+          <div>
+            <h3>Node.js and APIs</h3>
+            <ul>
+              <li><strong>MERN product app:</strong> a full-stack product-management app on MongoDB, Express, React and Node.js.</li>
+              <li><strong>Auth and validation:</strong> login and sign-up with backend validation and error handling.</li>
+              <li><strong>CRUD and forms:</strong> product forms with full create, read, update and delete.</li>
+              <li><strong>APIs:</strong> REST and GraphQL APIs, plus DocuSign, Zapier and other third-party API and SDK integrations.</li>
+            </ul>
           </div>
         </div>
       </div>
@@ -307,12 +342,26 @@ footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; g
             <div class="body">
               <p class="meta">Kinectro · 2022</p>
               <h3>Product and crypto dashboards</h3>
-              <p>A MERN product-management app with authentication and full CRUD, plus React data-visualization features.</p>
+              <p>A MERN product-management app with login, sign-up and full CRUD, plus React data-visualization features.</p>
               <ul>
+                <li>Express and Node.js API with backend validation</li>
                 <li>Currency table with price charts over chosen date ranges</li>
                 <li>Broker application dashboard</li>
               </ul>
               <p class="tags">MongoDB · Express · React · Node.js</p>
+            </div>
+                    </article>
+          <article class="project">
+            <div class="thumb" aria-hidden="true"><div>pick a garment → <b>customize</b> → order<br>React Native</div></div>
+            <div class="body">
+              <p class="meta">Final year project · 2022</p>
+              <h3>Customized Tailor app</h3>
+              <p>A React Native mobile app that lets people customize their clothes before ordering from a tailor.</p>
+              <ul>
+                <li>Cross-platform mobile UI in React Native</li>
+                <li>Built as the final project for a BS in Computer Science at UET Lahore</li>
+              </ul>
+              <p class="tags">React Native · JavaScript · Mobile</p>
             </div>
           </article>
         </div>
