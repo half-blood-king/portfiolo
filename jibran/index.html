@@ -176,6 +176,12 @@ footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; g
 .plate img { height: 100%; width: auto; max-width: 9rem; object-fit: contain; display: block; }
 .timeline a.org { text-decoration: none; }
 .timeline a.org:hover, .timeline li a:hover { text-decoration: underline; }
+.certs { list-style: none; margin: 0; padding: 0; display: grid; gap: 1rem; }
+.cert { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 1rem; align-items: start; padding: 1.25rem; border: 1px solid var(--line); border-radius: 12px; background: var(--surface); max-width: 40rem; }
+.cert .badge { width: 2.75rem; height: 2.75rem; border-radius: 50%; display: grid; place-items: center; background: var(--accent-soft); color: var(--accent); font: 700 1rem/1 var(--display); }
+.cert h3 { font: 700 1.15rem/1.3 var(--display); }
+.cert p { margin: .3rem 0 0; color: var(--muted); }
+.cert .links { display: flex; flex-wrap: wrap; gap: 1rem; margin-top: .6rem; font-weight: 600; font-size: .95rem; }
 </style>
 
 <header class="bar">
@@ -186,6 +192,7 @@ footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; g
       <a href="#skills">Skills</a>
       <a href="#projects">Projects</a>
       <a href="#experience">Experience</a>
+      <a href="#certifications">Certifications</a>
       <a href="#contact">Contact</a>
     </nav>
   </div>
@@ -381,6 +388,28 @@ footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; g
             </div>
           </li>
         </ol>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="certifications">
+    <div class="wrap grid">
+      <p class="label">Certifications</p>
+      <div>
+        <h2>Courses and certificates</h2>
+        <ul class="certs">
+          <li class="cert">
+            <span class="badge" aria-hidden="true">HF</span>
+            <div>
+              <h3>Hugging Face Agents Course</h3>
+              <p>Certificate of Excellence · Hugging Face · <time datetime="2026-10-28">Oct 2026</time></p>
+              <div class="links">
+                <a href="Hugging_Face_Agents_Course_Certificate.pdf" target="_blank" rel="noopener">View certificate (PDF)</a>
+                <a href="https://huggingface.co/learn/agents-course" target="_blank" rel="noopener">About the course ↗</a>
+              </div>
+            </div>
+          </li>
+        </ul>
       </div>
     </div>
   </section>
