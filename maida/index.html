@@ -7,6 +7,7 @@
 <meta property="og:title" content="Maida Maqbool, Full-Stack Software Engineer">
 <meta property="og:description" content="Full-stack engineer who led the modernisation of a live SaaS platform: Rails to Next.js, a 4,200 ms query cut to 28 ms, and a move to Docker on AWS ECS.">
 <title>Maida Maqbool</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 rx=%277%27 fill=%27%232846C8%27/%3E%3Ctext x=%2716%27 y=%2722.5%27 font-family=%27Arial,sans-serif%27 font-size=%2718%27 font-weight=%27700%27 fill=%27white%27 text-anchor=%27middle%27%3EM%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap">
@@ -104,18 +105,6 @@ section { border-top: 1px solid var(--rule); padding-block: clamp(3rem, 7vw, 5re
 .head h2 { font-size: clamp(1.8rem, 3.8vw, 2.6rem); font-weight: 800; letter-spacing: -.03em; line-height: 1.05; }
 .head p { color: var(--muted); font-size: 1.1rem; }
 
-/* work: case rows, not a card grid */
-.cases { display: grid; gap: 0; }
-.case { display: grid; grid-template-columns: minmax(0, 18rem) minmax(0, 1fr); gap: 1rem clamp(1.5rem, 4vw, 3.5rem); padding-block: 2rem; border-top: 1px solid var(--rule); }
-.case:first-child { border-top: 0; padding-top: 0; }
-.case h3 { font-size: 1.35rem; font-weight: 700; letter-spacing: -.02em; line-height: 1.2; }
-.case .where { color: var(--muted); font-size: .95rem; margin-top: .4rem; }
-.case .body { display: grid; gap: .9rem; max-width: 40rem; }
-.case ul { margin: 0; padding-left: 1.15rem; display: grid; gap: .4rem; }
-.case li::marker { color: var(--faint); }
-.case .stack { color: var(--muted); font-size: .95rem; }
-.case .stack b { color: var(--ink); font-weight: 600; }
-.case.highlight h3 { color: var(--accent); }
 
 /* skills */
 .skills { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 19rem), 1fr)); gap: 2rem clamp(1.5rem, 4vw, 3rem); margin: 0; }
@@ -151,7 +140,52 @@ footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; g
 
 @media (max-width: 860px) {
   .hero { grid-template-columns: minmax(0, 1fr); }
-  .case, .jobs li { grid-template-columns: minmax(0, 1fr); }
+  .jobs li { grid-template-columns: minmax(0, 1fr); }
+}
+
+/* featured case with architecture diagram */
+.feature { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr); gap: clamp(1.75rem, 4vw, 3.5rem); align-items: center; background: var(--card); border: 1px solid var(--rule); border-radius: 18px; padding: clamp(1.5rem, 4vw, 2.75rem); }
+.feature .where, .tile .where { color: var(--muted); font-size: .95rem; }
+.feature h3 { font-size: clamp(1.5rem, 3vw, 2rem); font-weight: 800; letter-spacing: -.03em; line-height: 1.1; margin: .5rem 0 1rem; }
+.feature-text { display: grid; gap: 1rem; }
+.feature-text > p:not(.where):not(.stack) { font-size: 1.075rem; }
+.feature ul { margin: 0; padding-left: 1.15rem; display: grid; gap: .45rem; }
+.feature li::marker { color: var(--accent); }
+.stack { color: var(--muted); font-size: .95rem; }
+.stack b { color: var(--ink); font-weight: 600; }
+
+.arch { margin: 0; display: grid; grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr); align-items: center; gap: .75rem; background: var(--paper); border-radius: 12px; padding: 1.25rem; }
+.arch-col { display: grid; justify-items: stretch; }
+.arch figcaption { font-size: .85rem; font-weight: 600; color: var(--muted); margin-bottom: .6rem; }
+.node { display: grid; gap: .15rem; padding: .7rem .8rem; border-radius: 9px; font-size: .95rem; line-height: 1.3; }
+.node span { font-size: .8rem; }
+.node.old { border: 1.5px dashed var(--faint); color: var(--muted); }
+.node.new { background: var(--accent); color: #fff; }
+.node.new span { opacity: .85; }
+:root[data-theme="dark"] .node.new { color: #0E1424; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .node.new { color: #0E1424; } }
+.link { width: 1.5px; height: .9rem; margin-inline: auto; background: var(--faint); }
+.arch-arrow { color: var(--accent); display: grid; place-items: center; }
+
+.group-title { font-size: 1.15rem; font-weight: 700; letter-spacing: -.01em; margin: clamp(2.5rem, 5vw, 3.5rem) 0 1.25rem; }
+.tiles { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 20rem), 1fr)); gap: 2.25rem clamp(1.5rem, 4vw, 3rem); }
+.tile { border-top: 2px solid var(--ink); padding-top: 1rem; display: grid; gap: .6rem; align-content: start; }
+.tile h4 { margin: 0; font-size: 1.2rem; font-weight: 700; letter-spacing: -.015em; line-height: 1.25; }
+.tile p:not(.where):not(.stack) { color: var(--ink); }
+.tile strong { color: var(--accent); font-weight: 700; }
+
+/* nav: current section, theme toggle */
+.nav a[aria-current="true"] { color: var(--ink); text-decoration: underline; text-decoration-color: var(--accent); text-decoration-thickness: 2px; text-underline-offset: .45em; }
+.bar .right { display: flex; align-items: center; gap: 1.25rem; flex-wrap: wrap; }
+.theme { font: 500 .9rem/1 var(--font); color: var(--muted); background: none; border: 1px solid var(--rule); border-radius: 7px; padding: .45rem .7rem; cursor: pointer; }
+.theme:hover { color: var(--ink); border-color: var(--faint); }
+
+@media (max-width: 860px) {
+  .feature { grid-template-columns: minmax(0, 1fr); }
+}
+@media (max-width: 420px) {
+  .arch { grid-template-columns: minmax(0, 1fr); }
+  .arch-arrow { transform: rotate(90deg); }
 }
 </style>
 </head>
@@ -160,12 +194,15 @@ footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; g
 <header class="bar">
   <div class="wrap">
     <a class="brand" href="#top">Maida Maqbool</a>
+    <div class="right">
     <nav class="nav" aria-label="Sections">
       <a href="#work">Work</a>
       <a href="#skills">Skills</a>
       <a href="#experience">Experience</a>
       <a href="#contact">Contact</a>
     </nav>
+    <button class="theme" id="theme" type="button">Dark mode</button>
+    </div>
   </div>
 </header>
 
@@ -202,128 +239,87 @@ footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; g
         <p>Most of it on one product, which is the point: I know what it takes to keep a real system improving year after year.</p>
       </div>
 
-      <div class="cases">
-        <article class="case highlight">
-          <div>
-            <h3>Moving a live product from Rails to Next.js and NestJS</h3>
-            <p class="where">NextAgency, as lead engineer</p>
-          </div>
-          <div class="body">
-            <p>The platform had outgrown its server-rendered Rails views. I led the move to a Next.js front end and a NestJS API while the existing product stayed live.</p>
-            <ul>
-              <li>Set the front-end architecture: Next.js App Router, TypeScript, server-side rendering for data-heavy pages</li>
-              <li>Moved Rails features and APIs into NestJS services with JWT authentication</li>
-              <li>Built the new pages straight from designers' Figma files, with Tailwind CSS</li>
-            </ul>
-            <p class="stack"><b>Built with</b> Next.js, React, TypeScript, NestJS, Node.js, Tailwind CSS</p>
-          </div>
-        </article>
+      <article class="feature">
+        <div class="feature-text">
+          <p class="where">NextAgency, as lead engineer</p>
+          <h3>Moving a live product from Rails to Next.js and NestJS</h3>
+          <p>The platform had outgrown its server-rendered Rails views. I led the move to a Next.js front end and a NestJS API while the existing product stayed live.</p>
+          <ul>
+            <li>Set the front-end architecture: Next.js App Router, TypeScript, server-side rendering for data-heavy pages</li>
+            <li>Moved Rails features and APIs into NestJS services with JWT authentication</li>
+            <li>Built the new pages straight from designers' Figma files, with Tailwind CSS</li>
+          </ul>
+          <p class="stack"><b>Built with</b> Next.js, React, TypeScript, NestJS, Node.js, Tailwind CSS</p>
+        </div>
 
-        <article class="case">
-          <div>
-            <h3>Making slow pages fast</h3>
-            <p class="where">NextAgency, performance</p>
+        <figure class="arch" aria-label="Architecture before and after the migration">
+          <div class="arch-col">
+            <figcaption>Before</figcaption>
+            <div class="node old"><b>Rails app</b><span>Server-rendered views and API in one codebase</span></div>
+            <div class="link" aria-hidden="true"></div>
+            <div class="node old"><b>PostgreSQL</b></div>
           </div>
-          <div class="body">
-            <p>I traced a slow page to a single PostgreSQL query and cut it from 4,200 ms to 28 ms with the right indexes, then made the database ready for growth.</p>
-            <ul>
-              <li>Added an RDS read replica to spread read load off the primary database</li>
-              <li>Caching with Redis (Sidekiq, AWS ElastiCache) and search with Elasticsearch</li>
-              <li>Lazy loading and CloudFront CDN on the front end</li>
-            </ul>
-            <p class="stack"><b>Built with</b> PostgreSQL, Redis, Elasticsearch, AWS RDS, CloudFront</p>
+          <div class="arch-arrow" aria-hidden="true">
+            <svg viewBox="0 0 48 16" width="48" height="16"><path d="M0 8h44M37 2l7 6-7 6" fill="none" stroke="currentColor" stroke-width="1.75"/></svg>
           </div>
-        </article>
+          <div class="arch-col">
+            <figcaption>After</figcaption>
+            <div class="node new"><b>Next.js</b><span>App Router, TypeScript, server-side rendering</span></div>
+            <div class="link" aria-hidden="true"></div>
+            <div class="node new"><b>NestJS API</b><span>JWT authentication</span></div>
+            <div class="link" aria-hidden="true"></div>
+            <div class="node new"><b>PostgreSQL</b></div>
+          </div>
+        </figure>
+      </article>
 
-        <article class="case">
-          <div>
-            <h3>Upgrading the core without breaking it</h3>
-            <p class="where">NextAgency, platform</p>
-          </div>
-          <div class="body">
-            <p>Upgraded Rails 5.1 to 6 and Ruby 2.6.3 to 3, adapting code, APIs and gems, and helped make the platform HIPAA-compliant.</p>
-            <ul>
-              <li>Improved authentication (Devise), added rate limiting and backend validation</li>
-              <li>Integrated Microsoft Entra for a client migration</li>
-            </ul>
-            <p class="stack"><b>Built with</b> Ruby on Rails, Ruby, Devise, PostgreSQL</p>
-          </div>
+      <h3 class="group-title">More from NextAgency</h3>
+      <div class="tiles">
+        <article class="tile">
+          <h4>Making slow pages fast</h4>
+          <p>Traced a slow page to one PostgreSQL query and cut it from <strong>4,200 ms to 28 ms</strong> with the right indexes. Added an RDS read replica, Redis caching, Elasticsearch search, lazy loading and CloudFront.</p>
+          <p class="stack"><b>Built with</b> PostgreSQL, Redis, Elasticsearch, AWS RDS, CloudFront</p>
         </article>
-
-        <article class="case">
-          <div>
-            <h3>Shipping and running it</h3>
-            <p class="where">NextAgency, DevOps</p>
-          </div>
-          <div class="body">
-            <p>Moved the front end, back end and Zapier service from Elastic Beanstalk to Docker containers on AWS ECS, and designed the GitHub Actions pipeline that builds and deploys them.</p>
-            <ul>
-              <li>Release time went down once deploys were automated</li>
-              <li>Set up Datadog monitoring, which cut the time spent debugging production issues</li>
-            </ul>
-            <p class="stack"><b>Built with</b> Docker, AWS ECS, S3, IAM, Kubernetes, GitHub Actions, Datadog</p>
-          </div>
+        <article class="tile">
+          <h4>Upgrading the core without breaking it</h4>
+          <p>Upgraded Rails 5.1 to 6 and Ruby 2.6.3 to 3, adapting code, APIs and gems. Helped make the platform HIPAA-compliant with better authentication (Devise), rate limiting and backend validation.</p>
+          <p class="stack"><b>Built with</b> Ruby on Rails, Ruby, Devise, PostgreSQL</p>
         </article>
-
-        <article class="case">
-          <div>
-            <h3>Payments, signatures and live updates</h3>
-            <p class="where">NextAgency, integrations</p>
-          </div>
-          <div class="body">
-            <p>Connected the platform to the services agencies depend on, and built an automated onboarding pipeline that imports each new agency's data with live progress on screen.</p>
-            <ul>
-              <li>Stripe payments and subscriptions, Twilio SMS, DocuSign, Zapier and webhooks</li>
-              <li>Live imported-record counts pushed to the browser with Pusher and WebSockets</li>
-              <li>Wrote the platform's API documentation in Postman</li>
-            </ul>
-            <p class="stack"><b>Built with</b> REST APIs, Stripe, Twilio, DocuSign, Zapier, Pusher, Sidekiq</p>
-          </div>
+        <article class="tile">
+          <h4>Shipping and running it</h4>
+          <p>Moved the front end, back end and Zapier service from Elastic Beanstalk to Docker on AWS ECS, and designed the GitHub Actions pipeline that deploys them. Datadog monitoring cut the time spent debugging production issues.</p>
+          <p class="stack"><b>Built with</b> Docker, AWS ECS, S3, IAM, Kubernetes, GitHub Actions, Datadog</p>
         </article>
-
-        <article class="case">
-          <div>
-            <h3>AI features</h3>
-            <p class="where">NextAgency, AI</p>
-          </div>
-          <div class="body">
-            <p>Integrated Amazon Bedrock into the product and built a Python RAG pipeline that serves answers from an Ollama-hosted model to the web app. I also use Claude every day to plan, write and review code, and I check every change before it merges.</p>
-            <p class="stack"><b>Built with</b> Amazon Bedrock, Python, RAG, Ollama, Claude</p>
-          </div>
+        <article class="tile">
+          <h4>Payments, signatures and live updates</h4>
+          <p>Integrated Stripe, Twilio, DocuSign, Zapier and webhooks. Built an automated onboarding pipeline that imports each agency's data, with live record counts pushed over WebSockets. Wrote the API docs in Postman.</p>
+          <p class="stack"><b>Built with</b> REST APIs, Stripe, Twilio, DocuSign, Pusher, Sidekiq</p>
         </article>
-
-        <article class="case">
-          <div>
-            <h3>A drag-and-drop dashboard</h3>
-            <p class="where">NextAgency, front end</p>
-          </div>
-          <div class="body">
-            <p>A customisable dashboard where agencies arrange their own widgets, built from reusable React components.</p>
-            <p class="stack"><b>Built with</b> React, TypeScript, React DnD, Redux</p>
-          </div>
+        <article class="tile">
+          <h4>AI features</h4>
+          <p>Integrated Amazon Bedrock and built a Python RAG pipeline that serves answers from an Ollama-hosted model to the web app. I use Claude every day to plan, write and review code, and check every change before it merges.</p>
+          <p class="stack"><b>Built with</b> Amazon Bedrock, Python, RAG, Ollama, Claude</p>
         </article>
-
-        <article class="case">
-          <div>
-            <h3>Product and crypto dashboards</h3>
-            <p class="where">Kinectro, 2022</p>
-          </div>
-          <div class="body">
-            <p>A MERN product-management app with sign-up, login, validation and full create, read, update and delete, plus Binance price charts over chosen date ranges and a broker dashboard.</p>
-            <p class="stack"><b>Built with</b> MongoDB, Express, React, Node.js</p>
-          </div>
+        <article class="tile">
+          <h4>A drag-and-drop dashboard</h4>
+          <p>A customisable dashboard where agencies arrange their own widgets, built from reusable React components with shared Redux state.</p>
+          <p class="stack"><b>Built with</b> React, TypeScript, React DnD, Redux</p>
         </article>
+      </div>
 
-        <article class="case">
-          <div>
-            <h3>Rx-Pharmacy web system</h3>
-            <p class="where">Earlier client project, Microsoft stack</p>
-          </div>
-          <div class="body">
-            <p>A web application for running a pharmacy, built with ASP.NET and C#.</p>
-            <p>The Microsoft stack carried on into NextAgency, where I maintained modules running on SQL Server and jQuery and integrated Microsoft Entra for a client migration.</p>
-            <p class="stack"><b>Built with</b> ASP.NET, C#, SQL Server, jQuery, Microsoft Entra</p>
-          </div>
+      <h3 class="group-title">Before NextAgency</h3>
+      <div class="tiles">
+        <article class="tile">
+          <h4>Product and crypto dashboards</h4>
+          <p class="where">Kinectro, 2022</p>
+          <p>A MERN product-management app with sign-up, login, validation and full CRUD, plus Binance price charts over chosen date ranges and a broker dashboard.</p>
+          <p class="stack"><b>Built with</b> MongoDB, Express, React, Node.js</p>
+        </article>
+        <article class="tile">
+          <h4>Rx-Pharmacy web system</h4>
+          <p class="where">Earlier client project</p>
+          <p>A web application for running a pharmacy, built with ASP.NET and C#. I kept working in the Microsoft stack on NextAgency: SQL Server and jQuery modules, and Microsoft Entra for a client migration.</p>
+          <p class="stack"><b>Built with</b> ASP.NET, C#, SQL Server, jQuery, Microsoft Entra</p>
         </article>
       </div>
     </div>
@@ -420,6 +416,33 @@ footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; g
     };
     try { navigator.clipboard.writeText(text).then(done, fallback); } catch (e) { fallback(); }
   });
+
+  // theme toggle: follows the system until the visitor picks one
+  const root = document.documentElement, tbtn = document.getElementById('theme');
+  const mq = matchMedia('(prefers-color-scheme: dark)');
+  let saved = null; try { saved = localStorage.getItem('theme'); } catch (e) {}
+  if (saved) root.dataset.theme = saved;
+  const isDark = () => root.dataset.theme ? root.dataset.theme === 'dark' : mq.matches;
+  const label = () => { tbtn.textContent = isDark() ? 'Light mode' : 'Dark mode'; };
+  label(); mq.addEventListener('change', label);
+  tbtn.addEventListener('click', () => {
+    root.dataset.theme = isDark() ? 'light' : 'dark';
+    try { localStorage.setItem('theme', root.dataset.theme); } catch (e) {}
+    label();
+  });
+
+  // mark the section in view in the nav
+  const links = [...document.querySelectorAll('.nav a')];
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(en => {
+      if (!en.isIntersecting) return;
+      links.forEach(a => {
+        if (a.getAttribute('href') === '#' + en.target.id) a.setAttribute('aria-current', 'true');
+        else a.removeAttribute('aria-current');
+      });
+    });
+  }, { rootMargin: '-45% 0px -50% 0px' });
+  document.querySelectorAll('main section[id]').forEach(sec => io.observe(sec));
 </script>
 </body>
 </html>
