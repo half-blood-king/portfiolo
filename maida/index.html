@@ -153,6 +153,8 @@ footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; g
   .hero { grid-template-columns: minmax(0, 1fr); }
   .case, .jobs li { grid-template-columns: minmax(0, 1fr); }
 }
+.avatar { display: block; width: 120px; height: 120px; border-radius: 50%; object-fit: cover; margin-bottom: 1.5rem; border: 4px solid var(--card); box-shadow: 0 0 0 1px var(--rule); }
+.avatar[hidden] { display: none; }
 </style>
 </head>
 <body>
@@ -172,6 +174,7 @@ footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; g
 <main id="top">
   <div class="wrap hero">
     <div>
+      <img class="avatar" id="avatar" alt="Maida Maqbool" width="120" height="120" hidden>
       <p class="status"><strong>Open to new roles</strong> in Lahore or remote, available now</p>
       <h1>Maida Maqbool</h1>
       <p class="role">Full-stack software engineer: React, Next.js, Node.js, TypeScript and Ruby on Rails.</p>
@@ -410,6 +413,17 @@ footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; g
 
 <script>
   document.getElementById('year').textContent = new Date().getFullYear();
+
+  // Photo flag. Off by default: the photo is not requested or shown.
+  // Turn it on for everyone by setting SHOW_PHOTO to true, or preview it with ?photo=on.
+  // Needs photo.jpg next to this page (maida/photo.jpg). If the file is missing, nothing shows.
+  const SHOW_PHOTO = false;
+  const photoParam = new URLSearchParams(location.search).get('photo');
+  if (photoParam === 'on' || (SHOW_PHOTO && photoParam !== 'off')) {
+    const avatar = document.getElementById('avatar');
+    avatar.onload = () => { avatar.hidden = false; };
+    avatar.src = 'photo.jpg';
+  }
   const btn = document.getElementById('copy-email');
   btn.addEventListener('click', () => {
     const text = document.getElementById('email').textContent.trim();
