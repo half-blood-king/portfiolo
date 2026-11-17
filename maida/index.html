@@ -141,6 +141,7 @@ section.block { border-top: 1px solid var(--line); padding-block: clamp(3rem, 7v
 .contact-card { background: var(--ink); color: var(--bg); border-radius: 16px; padding: clamp(1.75rem, 5vw, 3rem); display: grid; gap: 1.5rem; }
 .contact-card h2 { color: var(--bg); margin: 0; }
 .contact-card p { margin: 0; opacity: .8; max-width: 34rem; }
+.contact-card a { color: var(--bg); }
 .email-row { display: flex; flex-wrap: wrap; align-items: center; gap: .75rem; }
 .email { font: 500 clamp(1rem, 2.6vw, 1.35rem)/1.3 var(--mono); user-select: all; overflow-wrap: anywhere; }
 .copy {
@@ -198,8 +199,8 @@ footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; g
 <main id="top">
   <div class="hero wrap">
     <p class="eyebrow">Lahore, Pakistan · Software Engineer</p>
-    <h1>Hi, I'm Maida Maqbool.<br><em>I build and scale SaaS apps with Rails and React.</em></h1>
-    <p class="lede">Software engineer with 4+ years building SaaS web applications with React front ends and Ruby on Rails and Node.js back ends, plus Elasticsearch, database tuning and AWS DevOps.</p>
+    <h1>Hi, I'm Maida Maqbool.<br><em>I build and scale SaaS apps with React, Next.js and Node.js.</em></h1>
+    <p class="lede">Full-stack software engineer with 4+ years building SaaS web applications in React, Next.js, TypeScript, Node.js and Ruby on Rails, with PostgreSQL, Elasticsearch, AWS and AI features.</p>
     <div class="actions">
       <a class="btn primary" href="#projects">See my work</a>
       <a class="btn ghost" href="#contact">Get in touch</a>
@@ -211,11 +212,11 @@ footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; g
       <p class="label">About</p>
       <div class="prose">
         <h2>Long-term ownership of a SaaS product</h2>
-        <p>I have spent three and a half years on NextAgency, a SaaS portal for insurance agencies, working across its Rails backend and React and Ember front ends. Along the way I helped upgrade it to Rails 6 and Ruby 3, moved its deployment to Docker on AWS ECS, and kept search and the database fast as usage grew. Now I am helping move it from Rails to a Next.js front end and a NestJS back end, building the new pages straight from Figma designs.</p>
-        <p>I care about clean design patterns, defensive programming and solid fundamentals, and I use AI-assisted development to ship faster. I want to keep growing as a full-stack engineer on React, Next.js, Node.js and NestJS, alongside Ruby on Rails, at a SaaS product company.</p>
+        <p>I spent four years (2022 to 2026) on NextAgency, a SaaS portal for US insurance agencies, as lead engineer and lead code reviewer, working across its Rails backend and React front end. Along the way I helped upgrade it to Rails 6 and Ruby 3, moved its deployment to Docker on AWS ECS, designed its GitHub Actions CI/CD pipeline, and kept search and the database fast as usage grew, including cutting one slow PostgreSQL query from 4,200 ms to 28 ms. I also helped move it from Rails to a Next.js front end and a NestJS back end, building the new pages straight from Figma designs.</p>
+        <p>I care about clean design patterns, defensive programming and solid fundamentals. I use Claude every day to plan, write and review code, and I check every change before it merges. I have also shipped AI features with Amazon Bedrock and a RAG pipeline. I want to keep growing as a full-stack engineer on React, Next.js, Node.js and TypeScript at a product company.</p>
         <dl class="facts">
           <div><dt>Based in</dt><dd>Lahore, Pakistan</dd></div>
-          <div><dt>Focus</dt><dd>React, Next.js, Node.js, Rails</dd></div>
+          <div><dt>Focus</dt><dd>React, Next.js, Node.js, TypeScript</dd></div>
           <div><dt>Experience</dt><dd>4+ years</dd></div>
           <div><dt>Languages</dt><dd>Urdu, English</dd></div>
         </dl>
@@ -231,27 +232,31 @@ footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; g
         <div class="skillsets">
           <div>
             <h3>Backend</h3>
-            <ul class="chips"><li>Ruby on Rails</li><li>Ruby 3</li><li>Node.js</li><li>NestJS</li><li>Express</li><li>MongoDB</li><li>REST</li><li>GraphQL</li><li>Backend validation</li></ul>
+            <ul class="chips"><li>Node.js</li><li>NestJS</li><li>Express</li><li>Ruby on Rails</li><li>Ruby 3</li><li>Python</li><li>REST</li><li>GraphQL</li><li>JWT auth</li><li>Rate limiting</li><li>Backend validation</li></ul>
           </div>
           <div>
             <h3>Frontend</h3>
-            <ul class="chips"><li>React</li><li>Next.js</li><li>Redux</li><li>React DnD</li><li>Reusable components</li><li>Data visualization</li><li>React Native</li><li>Ember.js</li><li>Figma to code</li><li>HTML</li><li>CSS</li><li>Tailwind CSS</li></ul>
+            <ul class="chips"><li>React</li><li>Next.js</li><li>TypeScript</li><li>Redux</li><li>React DnD</li><li>Reusable components</li><li>Data visualization</li><li>React Native</li><li>Figma to code</li><li>HTML</li><li>CSS</li><li>Tailwind CSS</li></ul>
           </div>
           <div>
             <h3>Search and data</h3>
-            <ul class="chips"><li>Elasticsearch</li><li>Query tuning</li><li>Indexing</li><li>Database scaling</li><li>MongoDB</li></ul>
+            <ul class="chips"><li>PostgreSQL</li><li>Query tuning</li><li>Indexing</li><li>Redis</li><li>Elasticsearch</li><li>MongoDB</li><li>SQL Server</li></ul>
           </div>
           <div>
             <h3>Cloud and DevOps</h3>
-            <ul class="chips"><li>AWS ECS</li><li>Elastic Beanstalk</li><li>Docker</li><li>GitHub Actions</li><li>Linux</li></ul>
+            <ul class="chips"><li>AWS ECS</li><li>RDS</li><li>S3</li><li>CloudFront</li><li>Elastic Beanstalk</li><li>Docker</li><li>Kubernetes</li><li>GitHub Actions</li><li>Datadog</li><li>Linux</li></ul>
           </div>
           <div>
             <h3>Integrations</h3>
-            <ul class="chips"><li>DocuSign API</li><li>Zapier</li><li>Third-party SDKs</li></ul>
+            <ul class="chips"><li>Stripe</li><li>Twilio</li><li>DocuSign API</li><li>Zapier</li><li>Webhooks</li><li>Pusher / WebSockets</li><li>Postman API docs</li></ul>
+          </div>
+          <div>
+            <h3>AI</h3>
+            <ul class="chips"><li>Claude</li><li>Amazon Bedrock</li><li>RAG</li><li>Ollama</li></ul>
           </div>
           <div>
             <h3>Languages</h3>
-            <ul class="chips"><li>Ruby</li><li>JavaScript</li><li>C++</li></ul>
+            <ul class="chips"><li>TypeScript</li><li>JavaScript</li><li>Ruby</li><li>Python</li><li>C++</li></ul>
           </div>
         </div>
       </div>
@@ -267,9 +272,9 @@ footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; g
           <div>
             <h3>React and frontend</h3>
             <ul>
-              <li><strong>Next.js migration:</strong> rebuilding NextAgency pages in Next.js as the product moves off Rails.</li>
+              <li><strong>Next.js migration:</strong> rebuilt NextAgency pages in Next.js (App Router) and TypeScript as the product moved off Rails.</li>
               <li><strong>Figma to live pages:</strong> turning Figma designs into responsive, production-ready pages.</li>
-              <li><strong>NextAgency portal:</strong> React and Ember.js front-end features on top of the Rails backend.</li>
+              <li><strong>NextAgency portal:</strong> React front-end features on top of the Rails backend, and a move from legacy CSS to Tailwind CSS.</li>
               <li><strong>Drag-and-drop dashboard:</strong> built with React DnD, Redux state management and reusable components.</li>
               <li><strong>Data visualization:</strong> a Binance currency table with bar and line charts of prices over date ranges, and a broker application dashboard.</li>
               <li><strong>Mobile:</strong> Customized Tailor, a React Native app for customizing clothes.</li>
@@ -279,11 +284,12 @@ footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; g
           <div>
             <h3>Node.js and APIs</h3>
             <ul>
-              <li><strong>NestJS migration:</strong> moving NextAgency's Rails backend logic and APIs to NestJS on Node.js.</li>
+              <li><strong>NestJS migration:</strong> moved NextAgency's Rails backend logic and APIs to NestJS on Node.js, with JWT auth.</li>
               <li><strong>MERN product app:</strong> a full-stack product-management app on MongoDB, Express, React and Node.js.</li>
               <li><strong>Auth and validation:</strong> login and sign-up with backend validation and error handling.</li>
               <li><strong>CRUD and forms:</strong> product forms with full create, read, update and delete.</li>
-              <li><strong>APIs:</strong> REST and GraphQL APIs, plus DocuSign, Zapier and other third-party API and SDK integrations.</li>
+              <li><strong>APIs:</strong> REST and GraphQL APIs, plus Stripe, Twilio, DocuSign, Zapier and webhook integrations, documented in Postman.</li>
+              <li><strong>Real-time:</strong> live import progress pushed to users with Pusher and WebSockets.</li>
             </ul>
           </div>
         </div>
@@ -300,30 +306,31 @@ footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; g
           <article class="project">
             <div class="thumb" aria-hidden="true"><div>Figma → <b>Next.js</b> pages<br>Rails → <b>NestJS</b> APIs</div></div>
             <div class="body">
-              <p class="meta">NextAgency · Migration, in progress</p>
+              <p class="meta">NextAgency · Migration</p>
               <a class="client" href="https://nextagency.com/" target="_blank" rel="noopener"><span class="plate"><img src="https://nextagency.com/wp-content/uploads/2025/10/next_agency_logo.svg" alt="NextAgency logo" loading="lazy" onerror="this.parentNode.hidden=true"></span><span class="dom">nextagency.com ↗</span></a>
               <h3>Moving NextAgency to Next.js and NestJS</h3>
-              <p>NextAgency has started moving from Ruby on Rails to a Node.js stack, with a Next.js front end and a NestJS back end. I'm part of the team doing the move.</p>
+              <p>NextAgency moved from Ruby on Rails to a Node.js stack, with a Next.js front end and a NestJS back end. I was part of the team that did the move.</p>
               <ul>
-                <li>Building new Next.js pages straight from Figma designs</li>
-                <li>Moving Rails features and APIs to NestJS services</li>
+                <li>Built new Next.js pages straight from Figma designs</li>
+                <li>Moved Rails features and APIs to NestJS services</li>
               </ul>
-              <p class="tags">Next.js · React · NestJS · Node.js · Figma</p>
+              <p class="tags">Next.js · React · TypeScript · NestJS · Node.js · Figma</p>
             </div>
           </article>
           <article class="project">
             <div class="thumb" aria-hidden="true"><div>Rails 5.1 → <b>Rails 6</b><br>Ruby 2.6.3 → <b>Ruby 3</b></div></div>
             <div class="body">
-              <p class="meta">NextAgency · 2022 to now</p>
+              <p class="meta">NextAgency · 2022 to 2026</p>
               <a class="client" href="https://nextagency.com/" target="_blank" rel="noopener"><span class="plate"><img src="https://nextagency.com/wp-content/uploads/2025/10/next_agency_logo.svg" alt="NextAgency logo" loading="lazy" onerror="this.parentNode.hidden=true"></span><span class="dom">nextagency.com ↗</span></a>
               <h3>NextAgency insurance portal</h3>
-              <p>A SaaS portal for insurance agencies, where I build end-to-end features across the Rails backend and React front end.</p>
+              <p>A SaaS portal for insurance agencies, where I built end-to-end features across the Rails backend and React front end.</p>
               <ul>
                 <li>Helped upgrade Rails 5.1 to 6 and Ruby 2.6.3 to 3</li>
-                <li>Elasticsearch search, query tuning and database scaling</li>
+                <li>Cut a slow PostgreSQL query from 4,200 ms to 28 ms with indexing; added an RDS read replica</li>
+                <li>Elasticsearch search, Redis caching and database scaling</li>
                 <li>DocuSign API integration and API performance work</li>
               </ul>
-              <p class="tags">Ruby on Rails · React · Ember.js · Elasticsearch</p>
+              <p class="tags">Ruby on Rails · React · PostgreSQL · Elasticsearch</p>
             </div>
           </article>
           <article class="project">
@@ -335,7 +342,7 @@ footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; g
               <p>Helped move deployment from Elastic Beanstalk to Dockerized ECS tasks for the frontend, the backend and the Zapier integration service.</p>
               <ul>
                 <li>Separate containers that talk to each other cleanly</li>
-                <li>GitHub Actions workflows to automate builds and deploys</li>
+                <li>Designed the GitHub Actions CI/CD pipeline to automate builds and deploys</li>
               </ul>
               <p class="tags">AWS ECS · Docker · GitHub Actions · Zapier</p>
             </div>
@@ -393,16 +400,18 @@ footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; g
         <h2>Where I've worked</h2>
         <ol class="timeline">
           <li>
-            <time>Nov 2022 to now</time>
+            <time>Nov 2022 to Oct 2026</time>
             <div>
               <h3>Software Engineer</h3>
               <span class="org">CodingCops</span> <span class="via">· <a href="https://nextagency.com/" target="_blank" rel="noopener">NextAgency</a> SaaS portal</span>
               <ul>
+                <li>Lead engineer and lead code reviewer; ran sprint estimation and worked with US clients</li>
                 <li>End-to-end Rails and React features for a portal used by insurance agencies</li>
-                <li>Rails 6 and Ruby 3 upgrades</li>
-                <li>Migration from Elastic Beanstalk to Docker on ECS, plus GitHub Actions</li>
-                <li>Now moving the product from Rails to Next.js and NestJS, building pages from Figma designs</li>
-                <li>Elasticsearch, DocuSign and Zapier integrations</li>
+                <li>Helped move the product from Rails to Next.js and NestJS, building pages from Figma designs</li>
+                <li>Cut a slow PostgreSQL query from 4,200 ms to 28 ms</li>
+                <li>Rails 6 and Ruby 3 upgrades, and HIPAA compliance work</li>
+                <li>Migration from Elastic Beanstalk to Docker on ECS, plus a GitHub Actions CI/CD pipeline and Datadog monitoring</li>
+                <li>Stripe, Twilio, DocuSign and Zapier integrations; Amazon Bedrock and RAG features</li>
               </ul>
             </div>
           </li>
@@ -431,11 +440,12 @@ footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; g
     <div class="wrap">
       <div class="contact-card">
         <h2>Let's work together</h2>
-        <p>Hiring for a Rails or React role, or need help with a SaaS product? Email me and I'll get back to you.</p>
+        <p>Hiring for a full-stack, React or Rails role? Email me and I'll get back to you.</p>
         <div class="email-row">
           <span class="email" id="email">maidlimaqbool@gmail.com</span>
           <button class="copy" id="copy-email" type="button">Copy email</button>
         </div>
+        <p><a href="https://pk.linkedin.com/in/maida-maqbool-06924a1a1" target="_blank" rel="noopener">LinkedIn ↗</a> · <a href="https://github.com/MaidaMaqbool" target="_blank" rel="noopener">GitHub ↗</a></p>
       </div>
     </div>
   </section>
