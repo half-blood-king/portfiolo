@@ -178,7 +178,7 @@ footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; g
       <p class="status">Lahore or remote</p>
       <h1>Maida Maqbool</h1>
       <p class="role">Full-stack software engineer: React, Next.js, Node.js, TypeScript and Ruby on Rails.</p>
-      <p class="intro">For four years I was lead engineer on NextAgency, a live SaaS platform for US insurance agencies. I led its move from Rails to Next.js and NestJS, made its slowest pages fast, and moved how it ships, while the product stayed live.</p>
+      <p class="intro">For four years I was lead engineer on NextAgency, a live SaaS platform used by 1,400+ US insurance agencies and 9,000+ users. I led its move from Rails to Next.js and NestJS, made its slowest pages fast, cut its release time and AWS bill, and supported its customers on US Eastern time, while the product stayed live.</p>
       <div class="actions">
         <a class="btn solid" href="mailto:maidlimaqbool@gmail.com">Email me</a>
         <a class="btn line" href="Maida_Maqbool_CV.pdf" download>Download CV</a>
@@ -194,6 +194,8 @@ footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; g
         <li><span class="what">Framework</span><span class="change"><span class="before">Rails 5.1</span><span class="to" aria-label="to">→</span><span class="after">Rails 6</span></span></li>
         <li><span class="what">Language</span><span class="change"><span class="before">Ruby 2.6.3</span><span class="to" aria-label="to">→</span><span class="after">Ruby 3</span></span></li>
         <li><span class="what">Hosting</span><span class="change"><span class="before">Elastic Beanstalk</span><span class="to" aria-label="to">→</span><span class="after">Docker on AWS ECS</span></span></li>
+        <li><span class="what">Release time</span><span class="change"><span class="before">~1 hour</span><span class="to" aria-label="to">→</span><span class="after">under 20 min</span></span></li>
+        <li><span class="what">Monthly AWS savings</span><span class="change"><span class="before">$0</span><span class="to" aria-label="to">→</span><span class="after">$1,200</span></span></li>
         <li><span class="what">Styling</span><span class="change"><span class="before">Legacy CSS</span><span class="to" aria-label="to">→</span><span class="after">Tailwind CSS</span></span></li>
       </ol>
     </aside>
@@ -262,10 +264,12 @@ footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; g
           <div class="body">
             <p>Moved the front end, back end and Zapier service from Elastic Beanstalk to Docker containers on AWS ECS, and designed the GitHub Actions pipeline that builds and deploys them.</p>
             <ul>
-              <li>Release time went down once deploys were automated</li>
+              <li>Release time fell from about 1 hour to under 20 minutes once deploys were automated</li>
               <li>Set up Datadog monitoring, which cut the time spent debugging production issues</li>
+              <li>Cut AWS costs by about $1,200 a month: about $700 from unused storage volumes, about $500 from a PostgreSQL version upgrade, and more from retiring an unused platform</li>
+              <li>Tested every feature with Playwright and ran regression suites through an AI agent on pre-production and production before sign-off</li>
             </ul>
-            <p class="stack"><b>Built with</b> Docker, AWS ECS, S3, IAM, Kubernetes, GitHub Actions, Datadog</p>
+            <p class="stack"><b>Built with</b> Docker, AWS ECS, S3, IAM, Kubernetes, GitHub Actions, Datadog, Playwright</p>
           </div>
         </article>
 
@@ -275,7 +279,7 @@ footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; g
             <p class="where">NextAgency, integrations</p>
           </div>
           <div class="body">
-            <p>Connected the platform to the services agencies depend on, and built an automated onboarding pipeline that imports each new agency's data with live progress on screen.</p>
+            <p>Connected the platform to the services agencies depend on, and built a custom onboarding pipeline that imports each new agency's data with live progress on screen. It led to about 5% more agency sign-ups.</p>
             <ul>
               <li>Stripe payments and subscriptions, Twilio SMS, DocuSign, Zapier and webhooks</li>
               <li>Live imported-record counts pushed to the browser with Pusher and WebSockets</li>
@@ -291,7 +295,7 @@ footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; g
             <p class="where">NextAgency, AI</p>
           </div>
           <div class="body">
-            <p>Integrated Amazon Bedrock into the product and built a Python RAG pipeline that serves answers from an Ollama-hosted model to the web app. I also use Claude every day to plan, write and review code, and I check every change before it merges.</p>
+            <p>Integrated Amazon Bedrock into the product, which helped lift sales and revenue by about 4%, and built a Python RAG pipeline that serves answers from an Ollama-hosted model to the web app. I also use Claude every day to plan, write and review code, and I check every change before it merges.</p>
             <p class="stack"><b>Built with</b> Amazon Bedrock, Python, RAG, Ollama, Claude</p>
           </div>
         </article>
@@ -302,8 +306,23 @@ footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; g
             <p class="where">NextAgency, front end</p>
           </div>
           <div class="body">
-            <p>A customisable dashboard where agencies arrange their own widgets, built from reusable React components.</p>
+            <p>A customisable dashboard where agencies arrange their own widgets to visualise and manage their cases, built from reusable React components. Agency purchases rose by more than 8% after it shipped.</p>
             <p class="stack"><b>Built with</b> React, TypeScript, React DnD, Redux</p>
+          </div>
+        </article>
+
+        <article class="case">
+          <div>
+            <h3>Product and technical support</h3>
+            <p class="where">NextAgency, US Eastern time</p>
+          </div>
+          <div class="body">
+            <p>Every day from 10 AM to 1 PM EST I supported NextAgency's customers directly: Stripe billing problems, issues in the platform's custom features, and anything urgent, fixed by priority.</p>
+            <ul>
+              <li>Reproduced each issue, found the root cause and shipped the fix</li>
+              <li>Checked fixes with regression tests on pre-production and production before closing them</li>
+            </ul>
+            <p class="stack"><b>Built with</b> Stripe, Datadog, PostgreSQL, Playwright</p>
           </div>
         </article>
 
@@ -344,7 +363,7 @@ footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; g
         <div><dt>Back end</dt><dd>Node.js, NestJS, Express, Ruby on Rails, Python, REST, GraphQL, JWT authentication, rate limiting, Sidekiq</dd></div>
         <div><dt>Data</dt><dd>PostgreSQL, query tuning and indexing, Redis, Elasticsearch, MongoDB, SQL Server</dd></div>
         <div><dt>Microsoft stack</dt><dd>C#, ASP.NET, SQL Server, jQuery, Microsoft Entra</dd></div>
-        <div><dt>Cloud and delivery</dt><dd>AWS (ECS, RDS, S3, CloudFront, IAM, ElastiCache), Docker, Kubernetes, GitHub Actions, Datadog, Linux</dd></div>
+        <div><dt>Cloud and delivery</dt><dd>AWS (ECS, RDS, S3, CloudFront, IAM, ElastiCache), Docker, Kubernetes, GitHub Actions, Datadog, Playwright, Linux</dd></div>
         <div><dt>Integrations and AI</dt><dd>Stripe, Twilio, DocuSign, Zapier, webhooks, Pusher and WebSockets, Postman; Amazon Bedrock, RAG pipelines, Ollama, Claude</dd></div>
       </dl>
     </div>
@@ -360,13 +379,15 @@ footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; g
           <time>Nov 2022 to Oct 2026</time>
           <div>
             <h3>Software Engineer, lead engineer on NextAgency</h3>
-            <p class="org">CodingCops, for <a href="https://nextagency.com/" target="_blank" rel="noopener">NextAgency</a>, a SaaS platform for US insurance agencies</p>
+            <p class="org">CodingCops, for <a href="https://nextagency.com/" target="_blank" rel="noopener">NextAgency</a>, a SaaS platform for 1,400+ US insurance agencies</p>
             <ul>
               <li>Led engineering on the platform and served as lead code reviewer</li>
               <li>Ran bi-weekly sprint estimation and worked directly with US clients on Eastern hours</li>
+              <li>Provided product and technical support from 10 AM to 1 PM EST: Stripe issues, platform fixes and priority customer issues</li>
               <li>Led the move from Rails to Next.js and NestJS; upgraded Rails and Ruby</li>
               <li>Cut a slow PostgreSQL query from 4,200 ms to 28 ms</li>
-              <li>Designed the CI/CD pipeline and moved hosting to Docker on AWS ECS</li>
+              <li>Designed the CI/CD pipeline and moved hosting to Docker on AWS ECS, cutting release time from about 1 hour to under 20 minutes</li>
+              <li>Cut AWS costs by about $1,200 a month</li>
             </ul>
           </div>
         </li>
@@ -394,7 +415,7 @@ footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; g
     <div class="wrap">
       <div class="contact">
         <h2>Hiring an engineer?</h2>
-        <p>I'm looking for a frontend, backend or full-stack role, in Lahore or remote. Email me and I'll get back to you.</p>
+        <p>I'm looking for a frontend, backend, full-stack, product engineering or product support role, in Lahore or remote, including US Eastern hours. Email me and I'll get back to you.</p>
         <div class="email-row">
           <span class="email" id="email">maidlimaqbool@gmail.com</span>
           <button class="copy" id="copy-email" type="button">Copy email</button>
